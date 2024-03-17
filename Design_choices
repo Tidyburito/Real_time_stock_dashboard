@@ -1,0 +1,23 @@
+Title and Sidebar:
+
+The title of the app is "Yahoo Finance Dashboard", indicating the purpose of the application.
+The sidebar provides interactive elements for users to input their desired stock ticker symbol, start and end dates for data visualization, and refresh interval for updating the data.
+Session State Management:
+
+The get_session_state() function ensures that session state variables like tickers are initialized and maintained throughout the session. This allows the app to remember previously entered ticker symbols even after refreshing or navigating within the app.
+User Inputs:
+
+The app allows users to input a stock ticker symbol, start and end dates for the data visualization, and a refresh interval to update the displayed information. These inputs are provided in the sidebar for ease of access.
+Dynamic Display of Stock Information:
+
+The app dynamically fetches live stock prices from Google Finance using web scraping (BeautifulSoup), displaying the current price of each entered stock ticker.
+It also utilizes the Yahoo Finance API (yfinance) to fetch historical pricing data for the specified stock within the selected date range. This data is then visualized using a line chart, allowing users to analyze the stock's performance over time.
+Error Handling:
+
+The app includes error handling mechanisms to handle scenarios such as invalid input, connection errors, or failure to retrieve data. Error messages are displayed to the user, providing feedback and guidance on how to proceed.
+Refresh Mechanism:
+
+The app automatically refreshes the displayed information at the specified interval, allowing users to continuously monitor stock prices and performance without manual intervention. This ensures that the displayed data remains up-to-date.
+Additional Information:
+
+The app calculates and displays additional metrics such as annual return, standard deviation, and risk-adjusted return, providing users with deeper insights into the risk and performance of the selected stocks.
